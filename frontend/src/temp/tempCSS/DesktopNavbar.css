@@ -1,0 +1,158 @@
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    background: linear-gradient(90deg, #0b4d6c, #083a52);
+    border-bottom: 1px solid #eee;
+    font-family: Inter, sans-serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* LEFT */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.navbar-logo {
+    height: 44px;
+}
+
+/* CENTER */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    display: none;
+    z-index: 20;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.nav-link i {
+    display: inline-block;   /* ⭐ FIX */
+    transition: transform 0.2s ease;
+}
+
+.dropdown-menu p {
+    padding: 8px 10px;
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.dropdown-menu p:hover {
+    background: #f4f6f8;
+}
+
+.dropdown:hover .nav-link,
+.dropdown:hover .nav-link i,
+.nav-link:hover {
+    color: #2b8cff;
+}
+
+.nav-link:hover i  {
+    transform: rotate(180deg);
+}
+
+/* RIGHT */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.nav-btn.primary {
+    background: #2b8cff;
+    color: white;
+}
+.nav-btn.primary:hover {
+    background: #1f6fd1;
+}
+
+.profile-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    font-size: 26px;
+}
+.profile-icon:hover {
+    transform: scale(1.15);
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: #ffffff;
+    cursor: pointer;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.theme-toggle i {
+    font-size: 18px;
+    line-height: 1;
+}
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.theme-toggle:active {
+    transform: scale(0.96);
+}
+
+[data-theme="light"] .theme-toggle i {
+    color: #ffd43b; /* warm sun */
+}
+
+[data-theme="dark"] .theme-toggle i {
+    color: #e5e7eb; /* soft moon */
+}
+

@@ -1,0 +1,104 @@
+/* ================= CONTAINER ================= */
+
+.urlconv-container {
+    background: #f9fafb;
+    padding: 60px 0px;
+    margin-top: 10px;
+    display: flex;
+}
+
+/* ================= FORM ================= */
+
+.urlconv-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ================= INPUT ================= */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.urlconv-input {
+    width: 100%;
+    padding: 22px 20px;
+    font-size: 18px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.urlconv-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.input-error {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+/* ================= ERROR POPUP ================= */
+.url-error {
+    color: #dc2626;
+    font-size: 16px;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= BUTTON ================= */
+
+.urlconv-button {
+    align-self: flex-start;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    border: none;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.urlconv-button:hover {
+    background: #b91c1c;
+}
+
+.urlconv-button:disabled {
+    background: #f87171;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ================= SPINNER ================= */
+
+.urlconv-spinner {
+    animation: urlconv-spin 1s linear infinite;
+}
+
+@keyframes urlconv-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

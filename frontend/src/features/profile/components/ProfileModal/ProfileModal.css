@@ -1,0 +1,213 @@
+/* Overlay */
+.profile-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--profile-overlay-bg);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal */
+.profile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 420px;
+    max-width: 90%;
+    background: var(--profile-modal-bg);
+    border-radius: 18px;
+    padding: 2rem;
+    z-index: 11;
+    box-shadow: var(--profile-modal-shadow);
+    animation: modalIn 0.3s ease forwards;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Close */
+.profile-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--profile-input-border);
+    transition: 0.2s;
+}
+
+.profile-close:hover {
+    color: var(--profile-title);
+}
+
+/* Title */
+.profile-title {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    color: var(--profile-title);
+}
+
+/* Avatar */
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.avatar-container {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--profile-avatar-border);
+    transition: 0.3s;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.05);
+}
+
+/* Upload Button */
+.avatar-upload {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: var(--profile-update-bg);
+    color: var(--profile-update-text);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.avatar-upload:hover {
+    background: var(--profile-update-hover);
+    transform: scale(1.1);
+}
+
+/* Username */
+.username-form {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.username-input {
+    flex: 1;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 2px solid var(--profile-input-border);
+    background: var(--profile-input-bg);
+    color: var(--profile-input-text);
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.username-input:focus {
+    border-color: var(--profile-input-focus);
+    outline: none;
+}
+
+.update-btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--profile-update-bg);
+    color: var(--profile-update-text);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.update-btn:hover {
+    background: var(--profile-update-hover);
+}
+
+.section-divider {
+    margin: 2rem 0 1rem 0;
+    height: 1px;
+    background-color: var(--profile-divider);
+    width: 100%;
+}
+
+/* Danger Zone */
+.danger-zone {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 14px;
+    background: var(--profile-danger-bg);
+    border: 1px solid var(--profile-danger-border);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.danger-toggle {
+    background: none;
+    border: none;
+    color: var(--profile-danger-text);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.danger-toggle:hover {
+    color: var(--profile-danger-hover);
+}
+
+.delete-btn {
+    padding: 10px 14px;
+    background: var(--profile-delete-bg);
+    color: var(--profile-delete-text);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    width: 100%;
+}
+
+.delete-btn:hover {
+    background: var(--profile-delete-hover);
+}
+
+@media (max-width: 480px) {
+    .username-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .update-btn {
+        width: 100%;
+    }
+}

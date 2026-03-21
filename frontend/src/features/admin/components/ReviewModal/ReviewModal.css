@@ -1,0 +1,102 @@
+.arm-overlay {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: var(--arm-overlay);
+    z-index: 10;
+}
+
+/* ================= MODAL ================= */
+
+.arm-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--arm-bg);
+    color: var(--arm-text);
+    width: 420px;
+    max-width: 95%;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: var(--arm-shadow);
+    z-index: 11;
+    animation: armIn .25s ease;
+}
+
+@keyframes armIn {
+    from { opacity: 0; transform: translate(-50%, -48%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* ================= CLOSE ================= */
+
+.arm-close {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ================= CONTENT ================= */
+
+.arm-title { margin-bottom: 15px; }
+
+.arm-status { font-weight: 600; }
+
+.arm-approved { color: var(--arm-success); }
+.arm-pending { color: #f59e0b; }
+.arm-rejected { color: var(--arm-danger); }
+
+/* Rating */
+.arm-stars {
+    display: flex;
+    gap: 6px;
+    margin-top: 5px;
+    font-size: 20px;
+    color: #f59e0b;
+}
+
+/* Textarea */
+.arm-textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--arm-border);
+    background: var(--arm-bg);
+    color: var(--arm-text);
+    resize: none;
+
+    max-height: 120px;       /* roughly 4 rows */
+    overflow-y: auto; 
+}
+
+/* ================= BUTTONS ================= */
+
+.arm-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.arm-btn {
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    color: #fff;
+}
+
+.arm-success { background: var(--arm-success); }
+.arm-danger { background: var(--arm-danger); }
+.arm-secondary { background: var(--arm-secondary); }
+
+.arm-btn:hover {
+    filter: brightness(1.1);
+} 

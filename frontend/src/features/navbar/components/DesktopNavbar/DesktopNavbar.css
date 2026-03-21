@@ -1,0 +1,163 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+
+    background: var(--bg-navbar);
+    border-bottom: 1px solid var(--border-color);
+    font-family: Inter, sans-serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ================= LEFT ================= */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.navbar-logo {
+    height: 44px;
+    width: 110px;
+}
+
+/* ================= CENTER ================= */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-inverse);
+    transition: color 0.2s ease;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 26px;
+    left: 0;
+
+    background: var(--bg-card);
+    min-width: 220px;
+    padding: 10px;
+
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+
+    display: none;
+    z-index: 20;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link i {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-menu p {
+    padding: 8px 10px;
+    margin: 0;
+
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+
+    color: var(--text-primary);
+}
+
+.dropdown-menu p:hover {
+    background: var(--bg-hover);
+}
+
+.dropdown:hover .nav-link,
+.dropdown:hover .nav-link i,
+.nav-link:hover {
+    color: var(--accent-primary);
+}
+
+.nav-link:hover i {
+    transform: rotate(180deg);
+}
+
+/* ================= RIGHT ================= */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.nav-btn.primary {
+    background: var(--accent-primary);
+    color: var(--text-inverse);
+}
+
+.nav-btn.primary:hover {
+    opacity: 0.9;
+}
+
+/* ================= PROFILE ICON ================= */
+.profile-icon {
+    cursor: pointer;
+    font-size: 26px;
+    color: var(--text-inverse);
+}
+
+.profile-icon:hover {
+    transform: scale(1.15);
+}
+
+/* ================= THEME TOGGLE ================= */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--toggle-bg);
+    border: 1px solid var(--toggle-border);
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.theme-toggle i {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--toggle-icon);
+}
+
+.theme-toggle:hover {
+    background: var(--toggle-bg-hover);
+}
+
+.theme-toggle:active {
+    transform: scale(0.96);
+}

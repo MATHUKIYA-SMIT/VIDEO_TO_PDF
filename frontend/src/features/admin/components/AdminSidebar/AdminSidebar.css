@@ -1,0 +1,219 @@
+/* ================= ADMIN SIDEBAR CONTAINER ================= */
+
+.admin-sidebar {
+    width: 300px;
+    background: var(--admin-sidebar-bg);
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--admin-sidebar-border);
+}
+
+/* ================= LOGO ================= */
+
+.admin-sidebar-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.admin-sidebar-logo {
+    height: 44px;
+    width: 110px;
+    object-fit: contain;
+}
+
+/* ================= NAVIGATION ================= */
+
+.admin-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-sidebar-nav a {
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--admin-text-primary);
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.admin-sidebar-nav a:hover {
+    background: var(--admin-nav-hover);
+}
+
+.admin-sidebar-nav a.active {
+    background: var(--admin-nav-active-bg);
+    color: var(--admin-nav-active-text);
+}
+
+/* ================= USER SECTION ================= */
+
+.admin-sidebar-user {
+    margin-top: auto;
+}
+
+.admin-user-card {
+    display: flex;
+    align-items: center;
+    background: var(--admin-user-card-bg);
+    padding: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: var(--admin-user-shadow);
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.admin-user-card:hover {
+    opacity: 0.95;
+}
+
+.admin-avatar {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+}
+
+/* ================= USER INFO ================= */
+
+.admin-user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.admin-user-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--admin-text-primary);
+}
+
+.admin-user-email {
+    font-size: 12px;
+    color: var(--admin-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ================= CHEVRON ================= */
+
+.admin-user-chevron {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+    color: var(--admin-text-secondary);
+}
+
+.admin-user-card.open .admin-user-chevron {
+    transform: rotate(180deg);
+}
+
+/* ================= DROPDOWN ================= */
+
+.admin-user-dropdown {
+    background: var(--admin-dropdown-bg);
+    border-radius: 14px;
+    margin-top: 8px;
+    padding: 12px;
+    box-shadow: var(--admin-dropdown-shadow);
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+
+/* ================= DROPDOWN BUTTON ================= */
+
+.admin-dropdown-btn {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    color: var(--admin-text-primary);
+}
+
+.admin-dropdown-btn:hover {
+    background: var(--admin-nav-hover);
+}
+
+/* ================= THEME SECTION ================= */
+
+.admin-theme-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+}
+
+.admin-theme-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-theme-main-icon {
+    font-size: 16px;
+    opacity: 0.7;
+    color: var(--admin-text-secondary);
+}
+
+.admin-theme-label {
+    font-size: 14px;
+    color: var(--admin-text-primary);
+}
+
+.admin-theme-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-theme-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    opacity: 0.7;
+    color: var(--admin-text-secondary);
+}
+
+.admin-theme-box:hover {
+    background-color: var(--admin-theme-hover);
+    opacity: 1;
+}
+
+.admin-theme-active {
+    background-color: var(--admin-theme-hover);
+    color: var(--admin-theme-active);
+    opacity: 1;
+}
+
+/* ================= DIVIDER ================= */
+
+.admin-divider {
+    border: none;
+    height: 1px;
+    margin: 12px 0;
+    background-color: var(--admin-divider);
+}
+
+/* ================= LOGOUT ================= */
+
+.admin-logout-btn {
+    border-radius: 8px;
+    font-weight: 500;
+}

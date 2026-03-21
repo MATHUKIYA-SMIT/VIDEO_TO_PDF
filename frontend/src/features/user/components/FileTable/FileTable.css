@@ -1,0 +1,135 @@
+/* ================= CONTAINER ================= */
+
+.files-container {
+    margin-top: 20px;
+    width: 60%;
+    background: var(--dash-files-section-bg);
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.files-header {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dash-table-text);
+}
+
+/* ================= TABLE WRAPPER ================= */
+
+.table-wrapper {
+    background: var(--dash-table-bg);
+    border-radius: 14px;
+    box-shadow: var(--dash-table-shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+/* ================= TABLE ================= */
+
+.files-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.files-table thead {
+    background: var(--dash-table-head-bg);
+}
+
+.files-table th,
+.files-table td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.files-table th {
+    font-weight: 600;
+    color: var(--dash-table-head-text);
+}
+
+.files-table td {
+    color: var(--dash-table-text);
+}
+
+.files-table tbody tr {
+    border-top: 1px solid var(--dash-table-row-border);
+    transition: background-color 0.2s ease;
+}
+
+.files-table tbody tr:hover {
+    background: var(--dash-table-row-hover);
+}
+
+/* ================= URL CELL ================= */
+
+.url-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+.url-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+/* ================= COPY BUTTON ================= */
+
+.copy-btn {
+    position: relative;
+    border: none;
+    background: var(--dash-copy-bg);
+    color: var(--dash-copy-text);
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    background: var(--dash-copy-hover);
+    transform: scale(1.05);
+}
+
+/* ================= TOOLTIP ================= */
+
+.tooltip-text {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dash-tooltip-bg);
+    color: var(--dash-tooltip-text);
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+/* Tooltip arrow */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--dash-tooltip-bg) transparent transparent transparent;
+}
+
+/* Show tooltip */
+.copy-btn:hover .tooltip-text {
+    opacity: 1;
+}

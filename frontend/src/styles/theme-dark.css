@@ -1,0 +1,430 @@
+[data-theme="dark"] {
+
+  /* DESKTOP NAVBAR */
+  --bg-navbar: #0f172a;
+  --bg-card: #0f172a;
+  --bg-hover: #4c4c4d;
+
+  --text-primary: #f9fafb;
+  --text-inverse: #ffffff;
+
+  --border-color: #1e293b;
+  --shadow-md: 0 12px 40px rgba(0,0,0,0.75);
+  --accent-primary: #38bdf8;
+
+  --toggle-bg: rgba(255,255,255,0.08);
+  --toggle-bg-hover: rgba(255,255,255,0.16);
+  --toggle-border: rgba(255,255,255,0.2);
+  --toggle-icon: #e5e7eb;
+
+  /* ===== MOBILE NAVBAR ===== */
+  --mobile-bg: #0f172a;
+
+  --mobile-link: #f9fafb;
+  --mobile-link-hover: #38bdf8;
+  --mobile-border: #1e293b;
+
+  --mobile-icon: #94a3b8;
+  --mobile-toggle-icon: #ffffff;
+
+  --mobile-submenu-text: #cbd5f5;
+  --mobile-submenu-icon: #38bdf8;
+  --mobile-submenu-hover: #0b1220;
+  --mobile-submenu-hover-text: #f9fafb;
+
+  /* ===== PRICING ===== */
+  --bg-primary: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+  --toggle-pricing-bg: #1e293b;
+
+  --primary-color: #818cf8;
+  --primary-gradient: linear-gradient(135deg, #818cf8, #a78bfa);
+  --primary-shadow: 0 6px 20px rgba(129, 140, 248, 0.4);
+
+  --success-color: #4ade80;
+
+  /* ================= LOGIN AND SIGN UP ================= */
+  --auth-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  --auth-modal-bg: #1e293b;
+  --auth-modal-shadow: 0 22px 50px rgba(0, 0, 0, 0.85);
+
+  --auth-tabs-bg:  #0f172a;
+  --auth-tab-text: #cbd5f5;
+  --auth-tab-active-bg: linear-gradient(135deg, #818cf8, #a78bfa);
+  --auth-tab-active-hover: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --auth-tab-active-text: #020617;
+
+  --auth-title: #f9fafb;
+
+  --auth-input-bg: #0f172a;
+  --auth-input-text: #f8fafc;
+  --auth-input-placeholder: #94a3b8;
+  --auth-input-border: #334155;
+  --auth-input-focus:  #818cf8;
+
+  --auth-submit-bg: linear-gradient(135deg, #818cf8, #a78bfa);
+  --auth-submit-hover: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --auth-submit-text: #020617;
+
+  --auth-link: #38bdf8;
+  --auth-switch-text: #cbd5f5;
+
+  --auth-password-rule-valid: #22c55e;
+  --auth-password-rule-invalid: #ef4444;
+  --auth-password-rule-text: #cbd5f5;
+  --auth-password-rule-bg: rgba(148, 163, 184, 0.08);
+  --auth-password-rule-border: #334155;
+
+  /* ================= FORGOT PASSWORD ================= */
+
+  --forgot-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  --forgot-modal-bg: #1e293b;
+  --forgot-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+
+  --forgot-title: #f8fafc;
+
+  --forgot-input-bg: #0f172a;
+  --forgot-input-border: #334155;
+  --forgot-input-text: #f8fafc;
+  --forgot-input-placeholder: #94a3b8;
+  --forgot-input-focus: #818cf8;
+
+  --forgot-submit-bg: linear-gradient(135deg, #818cf8, #a78bfa);
+  --forgot-submit-hover: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --forgot-submit-text: #020617;
+
+  --forgot-close: #94a3b8;
+  --forgot-close-hover: #ffffff;
+
+  /* ================= OTP MODAL ================= */
+
+  --otp-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  --otp-modal-bg: #1e293b;
+  --otp-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+
+  --otp-title: #f8fafc;
+  --otp-subtitle: #94a3b8;
+
+  --otp-box-bg: #0f172a;
+  --otp-box-border: #334155;
+  --otp-box-text: #f8fafc;
+  --otp-box-focus: #818cf8;
+
+  --otp-timer: #94a3b8;
+
+  --otp-resend-bg: linear-gradient(135deg, #818cf8, #a78bfa);
+  --otp-resend-hover: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --otp-resend-text: #020617;
+
+  --otp-close: #94a3b8;
+  --otp-close-hover: #ffffff;
+
+  /* ================= PROFILE MODAL ================= */
+
+  --profile-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  --profile-modal-bg: #1e293b;
+  --profile-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+
+  --profile-title: #f8fafc;
+
+  --profile-avatar-border: #334155;
+
+  --profile-input-bg: #0f172a;
+  --profile-input-border: #334155;
+  --profile-input-text: #f8fafc;
+  --profile-input-focus: #818cf8;
+
+  --profile-update-bg: linear-gradient(135deg, #818cf8, #a78bfa);
+  --profile-update-hover: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --profile-update-text: #020617;
+
+  --profile-divider: #334155;
+
+  --profile-danger-bg: rgba(239, 68, 68, 0.1);
+  --profile-danger-border: rgba(239, 68, 68, 0.35);
+  --profile-danger-text: #f87171;
+  --profile-danger-hover: #ef4444;
+
+  --profile-delete-bg: #ef4444;
+  --profile-delete-hover: #dc2626;
+  --profile-delete-text: #ffffff;
+
+  /* ================= HERO SECTION ================= */
+  --hero-bg: #0f172a;
+  --hero-heading: #cbd5f5;
+  --hero-title: #f8fafc;
+  --hero-description: #94a3b8;
+
+  /* ================= Url Converter ================= */
+
+  --converter-wrapper-bg: #0f172a;
+  --converter-image-filter: brightness(0.95);
+
+  --converter-input-bg: #0f172a;
+  --converter-input-text: #f8fafc;
+  --converter-input-border: #334155;
+  --converter-input-focus: #818cf8;
+  --converter-input-disabled-bg: #111827;
+  --converter-input-disabled-text: #475569;
+  --converter-input-placeholder: #94a3b8;
+
+  --converter-url-error-text: #f87171;
+  --converter-url-error-bg: #3f1d1d;
+
+  --converter-btn-bg: #ef4444;
+  --converter-btn-hover: #dc2626;
+  --converter-btn-disabled-bg: #7f1d1d;
+  --converter-btn-text: #ffffff;
+  --converter-btn-disabled-text: #fecaca;
+
+  /* ================= BENEFITS SECTION ================= */
+
+  --benefits-section-bg: #0f172a;
+  --benefits-title: #f8fafc;
+
+  --benefits-card-bg: #1e293b;
+  --benefits-card-shadow: 0 0 10px 2px rgba(234, 228, 228, 0.6);
+  --benefits-card-title: #f8fafc;
+  --benefits-card-text: #94a3b8;
+
+  --benefits-point-text: #cbd5f5;
+
+
+  /* ================= HOW TO USE SECTION ================= */
+
+  --steps-section-bg: #0f172a;
+  --steps-title: #f8fafc;
+  --steps-card-bg: #1e293b;
+  --steps-icon: #818cf8;  
+  --steps-step-title: #94a3b8;
+  --steps-text: #cbd5f5;
+
+  --steps-locked-bg: #ffffff;
+  --steps-locked-icon:  #6366f1; 
+  --steps-locked-text: #111827;
+
+  /* ================= WHY CONVERT SECTION ================= */
+
+  --why-section-bg: #0f172a;
+  --why-heading: #f8fafc;
+  --why-card-bg: #1e293b;
+  --why-card-shadow-hover: 0 0 10px 2px rgba(234, 228, 228, 0.6);
+
+  --why-icon-color: #818cf8; 
+  --why-title-color: #cbd5f5;
+  --why-text-color: #94a3b8;
+
+  /* ================= REVIEW CARD SECTION ================= */
+
+  --review-card-bg: #1e293b;
+  --review-card-shadow:  0 0 10px 2px  rgba(234, 228, 228, 0.6);
+
+  --review-username: #f8fafc;
+  --review-text: #cbd5f5;
+  --review-date: #94a3b8;
+
+  /* ================= REVIEW MODAL SECTION ================= */
+
+  --review-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  --review-modal-bg: #1e293b;
+  --review-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+
+  --review-title: #f8fafc;
+  --review-label: #cbd5f5;
+
+  --review-input-bg: #0f172a;
+  --review-input-border: #334155;
+  --review-input-text: #f8fafc;
+  --review-input-focus: #818cf8;
+
+  --review-submit-bg: linear-gradient(135deg, #818cf8, #a78bfa);
+  --review-submit-text: #020617;
+  --review-submit-bg-hover: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --review-submit-disabled-bg: #334155;
+
+  --review-cancel-bg: #334155;
+  --review-cancel-text: #f1f5f9;
+  --review-cancel-bg-hover: #475569;
+
+  /* ================= REVIEW SECTION ================= */
+
+  --reviews-section-bg: #0f172a;
+  --reviews-title: #f8fafc;
+
+  --reviews-btn-bg: transparent;
+  --reviews-btn-text: #818cf8;
+  --reviews-btn-border: #818cf8;
+  --reviews-btn-hover-bg: #6366f1;
+  --reviews-btn-hover-border: #6366f1;
+  --reviews-btn-text-hover: #ffffff;
+
+  /* ================= FOOTER ================= */
+  --footer-bg: #020617;
+  --footer-title: #f9fafb;
+  --footer-text: #cbd5f5;
+
+  --footer-link: #94a3b8;
+  --footer-link-hover: #f9fafb;
+
+  --footer-divider: #1e293b;
+  --footer-copy: #94a3b8;
+
+  /* ================= DASHBOARD SIDEBAR ================= */
+
+  --dash-sidebar-bg: #0f172a;
+  --dash-sidebar-border: #1e293b;
+
+  --dash-card-bg: #1e293b;
+  --dash-card-shadow: 0 8px 25px rgba(0,0,0,0.6);
+
+  --dash-text-primary: #f9fafb;
+  --dash-text-secondary: #94a3b8;
+
+  --dash-progress-bg: #1e293b;
+  --dash-progress-fill: #818cf8;
+
+  --dash-nav-hover: #1e293b;
+  --dash-nav-active-bg: #818cf8;
+  --dash-nav-active-text: #020617;
+
+  --dash-user-card-bg: #1e293b;
+  --dash-user-shadow: 0 6px 18px rgba(0,0,0,0.6);
+
+  --dash-dropdown-bg: #1e293b;
+  --dash-dropdown-shadow: 0 12px 35px rgba(0,0,0,0.7);
+
+  --dash-divider: #334155;
+
+  --dash-theme-hover: #334155;
+  --dash-theme-active: #818cf8;
+
+  /* ================= DASHBOARD FILE TABLE ================= */
+--dash-files-section-bg: #1e293b;
+
+--dash-table-bg: #1e293b;
+--dash-table-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+
+--dash-table-head-bg: #0f172a;
+--dash-table-head-text: #cbd5f5;
+
+--dash-table-row-border: #334155;
+--dash-table-row-hover: #334155;
+
+--dash-table-text: #f9fafb;
+
+--dash-copy-bg: #334155;
+--dash-copy-hover: #475569;
+--dash-copy-text: #f1f5f9;
+
+--dash-tooltip-bg: #f9fafb;
+--dash-tooltip-text: #020617;
+
+  /* ================= DASHBOARD UPGRADE CARD ================= */
+
+  --dash-upgrade-gradient: linear-gradient(135deg, #818cf8, #6366f1);
+  --dash-upgrade-text: #ffffff;
+
+  --dash-upgrade-btn-bg: #020617;
+  --dash-upgrade-btn-text: #818cf8;
+  --dash-upgrade-btn-hover: #0f172a;
+
+  --dash-upgrade-save-text: rgba(255, 255, 255, 0.75);
+
+  /* ================= DASHBOARD URL CONVERTER ================= */
+
+  --dash-url-section-bg: #0f172a;
+
+  --dash-url-input-bg: #0f172a;
+  --dash-url-input-text: #f9fafb;
+  --dash-url-input-border: #334155;
+  --dash-url-input-focus: #818cf8;
+
+  --dash-url-error-text: #f87171;
+  --dash-url-error-bg: #3f1d1d;
+
+  --dash-url-btn-bg: #ef4444;
+  --dash-url-btn-hover: #dc2626;
+  --dash-url-btn-disabled: #7f1d1d;
+  --dash-url-btn-text: #ffffff;
+
+  /* ================= DASHBOARD LAYOUT ================= */
+
+  --dash-layout-bg: #0b1220;
+  --dash-content-bg: #0f172a;
+
+
+  /* ================= ADMIN DASHBOARD ================= */
+
+  --admin-sidebar-bg: #0f172a;
+  --admin-sidebar-border: #1e293b;
+
+  --admin-card-bg: #1e293b;
+  --admin-card-shadow: 0 8px 25px rgba(0,0,0,0.6);
+
+  --admin-text-primary: #f9fafb;
+  --admin-text-secondary: #94a3b8;
+
+  --admin-progress-bg: #1e293b;
+  --admin-progress-fill: #818cf8;
+
+  --admin-nav-hover: #24344b;
+  --admin-nav-active-bg: #818cf8;
+  --admin-nav-active-text: #020617;
+
+  --admin-user-card-bg: #1e293b;
+  --admin-user-shadow: 0 6px 18px rgba(0,0,0,0.6);
+
+  --admin-dropdown-bg: #1e293b;
+  --admin-dropdown-shadow: 0 12px 35px rgba(0,0,0,0.7);
+
+  --admin-divider: #334155;
+
+  --admin-theme-hover: #334155;
+  --admin-theme-active: #818cf8;
+
+  /* ================= ADMIN DASHBOARD LAYOUT ================= */
+
+  --admin-dash-layout-bg: #0b1220;
+  --admin-dash-content-bg: #0f172a;
+
+  /* ================= ADMIN USER CARD ================= */
+
+  --admin-user-card-bg: #1e293b;
+  --admin-user-card-border: #334155;
+  --admin-user-card-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  --admin-user-card-hover-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+
+  --admin-user-card-text-primary: #f9fafb;
+  --admin-user-card-text-secondary: #94a3b8;
+
+  --admin-user-card-avatar-border: #334155;
+
+  --admin-user-card-review-border: #818cf8;
+  --admin-user-card-review-text: #818cf8;
+  --admin-user-card-review-hover-bg: #818cf8;
+  --admin-user-card-review-hover-text: #020617;
+
+  /* ================= ADMIN REVIEW MODAL ================= */
+  --arm-bg: #1f2937;
+  --arm-text: #f3f4f6;
+  --arm-border: #374151;
+  --arm-shadow: 0 15px 35px rgba(0,0,0,0.5);
+
+  --arm-success: #22c55e;
+  --arm-danger: #ef4444;
+  --arm-secondary: #4b5563;
+
+  --arm-overlay: rgba(0,0,0,0.6);
+
+}

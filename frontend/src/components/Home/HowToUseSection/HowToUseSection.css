@@ -1,0 +1,58 @@
+/* ================= HOW TO USE SECTION ================= */
+
+.steps-wrapper {
+    background: var(--steps-section-bg);
+    padding: 10px 0;
+}
+
+/* TITLE */
+.steps-title {
+    color: var(--steps-title);
+    font-weight: 750;
+}
+
+/* CARD */
+.step-card {
+    background: var(--steps-card-bg);
+    border-radius: 14px;
+    padding: 32px 22px;
+    text-align: center;
+
+}
+
+/* ICON */
+.step-icon {
+    font-size: 36px;
+    color: var(--steps-icon);
+    margin-bottom: 14px;
+}
+
+/* STEP TITLE */
+.step-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--steps-step-title);
+}
+
+/* TEXT */
+.step-text {
+    font-size: 16px;
+    color: var(--steps-text);
+    line-height: 1.5;
+}
+
+/* LOCKED CARD */
+.locked-card {
+    background: var(--steps-locked-bg);
+    box-shadow: none;
+}
+
+.locked-card .step-icon {
+    color: var(--steps-locked-icon);
+}
+
+.locked-text {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--steps-locked-text);
+}

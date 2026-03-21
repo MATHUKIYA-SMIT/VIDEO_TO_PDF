@@ -1,0 +1,40 @@
+.admin-user-card {
+    background: var(--admin-user-card-bg);
+    border: 1px solid var(--admin-user-card-border);
+    box-shadow: var(--admin-user-card-shadow);
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-user-card:hover {
+    box-shadow: var(--admin-user-card-hover-shadow);
+}
+
+.admin-user-card-avatar {
+    object-fit: cover;
+    border: 3px solid var(--admin-user-card-avatar-border);
+}
+
+.admin-user-card-name {
+    color: var(--admin-user-card-text-primary);
+    font-weight: 600;
+}
+
+.admin-user-card-email {
+    color: var(--admin-user-card-text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.admin-user-card-review-btn {
+    border: 1px solid var(--admin-user-card-review-border);
+    color: var(--admin-user-card-review-text);
+    background: transparent;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.admin-user-card-review-btn:hover {
+    background: var(--admin-user-card-review-hover-bg);
+    color: var(--admin-user-card-review-hover-text);
+}

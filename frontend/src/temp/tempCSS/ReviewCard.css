@@ -1,0 +1,15 @@
+.review-card {
+    border-radius: 14px;
+    padding: 4px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.04);
+}
+
+.review-avatar {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}

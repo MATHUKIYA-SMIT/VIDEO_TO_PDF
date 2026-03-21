@@ -1,0 +1,99 @@
+.delete-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 12;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.delete-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    background: white;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 13;
+    animation: modalIn 0.25s ease;
+}
+@keyframes modalIn {
+from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+}
+
+.delete-modal h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ff2e2e;
+}
+
+.delete-warning {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.delete-modal input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-bottom: 1.2rem;
+}
+
+.delete-modal input:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
+}
+
+.delete-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cancel-btn {
+    flex: 1;
+    background: #ccc;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.confirm-delete-btn {
+    flex: 1;
+    background: #ff2e2e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.confirm-delete-btn:hover:not(:disabled) {
+    background: #d61f1f;
+}
+
+.confirm-delete-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

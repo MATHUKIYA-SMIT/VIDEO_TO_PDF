@@ -1,0 +1,46 @@
+.why-section {
+  background: var(--why-section-bg);
+}
+
+.why-card {
+  background: var(--why-card-bg);
+  border-radius: 14px;
+  padding: 26px;
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.why-card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--why-card-shadow-hover);
+}
+
+.why-convert-title{
+    color: var(--why-heading);
+    font-weight: 800;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.icon-title i {
+  font-size: 20px;
+  color: var(--why-icon-color);
+}
+
+.icon-title span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--why-title-color);
+}
+
+.why-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--why-text-color);
+  margin-bottom: 0;
+}

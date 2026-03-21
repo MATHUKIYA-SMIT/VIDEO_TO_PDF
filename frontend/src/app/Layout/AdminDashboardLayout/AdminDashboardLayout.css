@@ -1,0 +1,14 @@
+/* ================= DASHBOARD LAYOUT ================= */
+.admin-dashboard-container {
+    display: flex;
+    height: 100vh;
+    background: var(--admin-dash-layout-bg);
+}
+
+/* ================= MAIN CONTENT ================= */
+.admin-dashboard-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: var(--admin-dash-content-bg);
+}

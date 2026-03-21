@@ -1,0 +1,40 @@
+/* ================= HERO SECTION ================= */
+
+.RotatingText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    width: 100%;
+
+    padding: 40px 20px;
+    background: var(--hero-bg);
+}
+
+/* Heading line with rotating words */
+.RotatingText h2 {
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--hero-heading);
+    margin-bottom: 14px;
+}
+
+/* Main product title */
+#introduction {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 4px 0 10px;
+
+    color: var(--hero-title);
+}
+
+/* Supporting description */
+#intro_content {
+    max-width: 590px;
+    line-height: 1.6;
+    font-size: 18px;
+
+    color: var(--hero-description);
+}

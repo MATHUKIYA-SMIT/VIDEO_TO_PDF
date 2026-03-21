@@ -1,0 +1,19 @@
+.star-rating {
+    display: flex;
+    gap: 8px;
+}
+
+.star-icon {
+    font-size: 26px;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: transform 0.4s ease, color 0.2s ease;
+}
+
+.star-icon.active {
+    color: #facc15;
+}
+
+.star-icon:hover {
+    transform: scale(1.2);
+}

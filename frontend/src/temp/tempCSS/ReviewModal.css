@@ -1,0 +1,100 @@
+/* FULLSCREEN BLUR */
+.review-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+/* MODAL CENTER */
+.review-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 22px;
+  z-index: 20;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* TITLE */
+.review-title {
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* FORM */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* INPUT GROUP */
+.review-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.review-field select,
+.review-field textarea {
+  padding: 9px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.review-field select:focus,
+.review-field textarea:focus {
+  border-color: #2563eb;
+}
+
+/* ACTIONS */
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.review-actions button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* SUBMIT */
+.review-actions button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+.review-actions button[type="submit"]:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* CANCEL */
+.review-cancel {
+  background-color: #e5e7eb;
+  color: #111827;
+}

@@ -1,0 +1,100 @@
+/* ================= MENU TOGGLE ================= */
+
+.menu-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    font-size: 28px;
+    color: var(--mobile-toggle-icon);
+}
+
+.menu-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ================= FULL SCREEN OVERLAY ================= */
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    background: var(--mobile-bg);
+    z-index: 9;
+
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* ================= CONTENT ================= */
+
+.mobile-menu-content {
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ================= LINKS ================= */
+
+.mobile-link {
+    font-size: 18px;
+    padding: 16px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    min-width: 0;
+
+    color: var(--mobile-link);
+    border-bottom: 1px solid var(--mobile-border);
+
+    transition: color 0.15s ease;
+}
+
+.mobile-link:hover {
+    color: var(--mobile-link-hover);
+}
+
+.mobile-link i {
+    flex-shrink: 0;
+    color: var(--mobile-icon);
+}
+
+/* ================= SUBMENU ================= */
+
+.submenu {
+    padding: 10px 0 10px 16px;
+}
+
+.submenu p {
+    margin: 8px 0;
+    padding: 10px 12px;
+
+    font-size: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    cursor: pointer;
+    border-radius: 8px;
+
+    color: var(--mobile-submenu-text);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.submenu p i {
+    color: var(--mobile-submenu-icon);
+}
+
+.submenu p:hover {
+    background-color: var(--mobile-submenu-hover);
+    color: var(--mobile-submenu-hover-text);
+}

@@ -1,0 +1,430 @@
+[data-theme="light"] {
+
+  /* DESKTOP NAVBAR */
+
+  --bg-navbar:  #084765;
+  --bg-card: #ffffff;
+  --bg-hover: #f4f6f8;
+
+  --text-primary: #111827;
+  --text-inverse: #ffffff;
+
+  --border-color: #e5e7eb;
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
+  --accent-primary: #2b8cff;
+
+  --toggle-bg: rgba(255,255,255,0.12);
+  --toggle-bg-hover: rgba(255,255,255,0.22);
+  --toggle-border: rgba(255,255,255,0.25);
+  --toggle-icon: #ffd43b;
+
+  /* ===== MOBILE NAVBAR ===== */
+  --mobile-bg: #ffffff;
+
+  --mobile-link: #111827;
+  --mobile-link-hover: #2b8cff;
+  --mobile-border: #e5e7eb;
+
+  --mobile-icon: #6b7280;
+  --mobile-toggle-icon: #ffffff;
+
+  --mobile-submenu-text: #374151;
+  --mobile-submenu-icon: #2b8cff;
+  --mobile-submenu-hover: #f4f6f8;
+  --mobile-submenu-hover-text: #111827;
+
+  /* ===== PRICING ===== */
+  --bg-primary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+  --toggle-pricing-bg: #f3f4f6;
+
+  --primary-color: #6366f1;
+  --primary-gradient: linear-gradient(135deg, #6366f1, #7c3aed);
+  --primary-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+
+  --success-color: #22c55e;
+
+  /* ================= LOGIN AND SIGN UP ================= */
+  --auth-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  --auth-modal-bg: #ffffff;
+  --auth-modal-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+
+  --auth-tabs-bg: #f3f4f6;
+  --auth-tab-text: #374151;
+  --auth-tab-active-bg: linear-gradient(135deg, #6366f1, #7c3aed);
+  --auth-tab-active-hover: linear-gradient(135deg, #4f46e5, #6d28d9);
+  --auth-tab-active-text: #ffffff;
+
+  --auth-title: #111827;
+
+  --auth-input-bg: #ffffff;
+  --auth-input-text: #111827;
+  --auth-input-placeholder: #9ca3af;
+  --auth-input-border: #d1d5db;
+  --auth-input-focus: #6366f1;
+
+  --auth-submit-bg: linear-gradient(135deg, #6366f1, #7c3aed);
+  --auth-submit-hover: linear-gradient(135deg, #4f46e5, #6d28d9);
+  --auth-submit-text: #ffffff;
+
+  --auth-link: #2563eb;
+  --auth-switch-text: #374151;
+
+  --auth-password-rule-valid: #16a34a;
+  --auth-password-rule-invalid: #dc2626;
+  --auth-password-rule-text: #374151;
+  --auth-password-rule-bg: #f9fafb;
+  --auth-password-rule-border: #e5e7eb;
+
+  /* ================= FORGOT PASSWORD ================= */
+
+  --forgot-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  --forgot-modal-bg: #ffffff;
+  --forgot-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  --forgot-title: #111827;
+
+  --forgot-input-bg: #ffffff;
+  --forgot-input-border: #d1d5db;
+  --forgot-input-text: #111827;
+  --forgot-input-placeholder: #9ca3af;
+  --forgot-input-focus: #6366f1;
+
+  --forgot-submit-bg: linear-gradient(135deg, #6366f1, #7c3aed);
+  --forgot-submit-hover: linear-gradient(135deg, #4f46e5, #6d28d9);
+  --forgot-submit-text: #ffffff;
+
+  --forgot-close: #6b7280;
+  --forgot-close-hover: #111827;
+
+  /* ================= OTP MODAL ================= */
+
+  --otp-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  --otp-modal-bg: #ffffff;
+  --otp-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  --otp-title: #111827;
+  --otp-subtitle: #6b7280;
+
+  --otp-box-bg: #ffffff;
+  --otp-box-border: #d1d5db;
+  --otp-box-text: #111827;
+  --otp-box-focus: #6366f1;
+
+  --otp-timer: #6b7280;
+
+  --otp-resend-bg: linear-gradient(135deg, #6366f1, #7c3aed);
+  --otp-resend-hover: linear-gradient(135deg, #4f46e5, #6d28d9);
+  --otp-resend-text: #ffffff;
+
+  --otp-close: #6b7280;
+  --otp-close-hover: #111827;
+
+  /* ================= PROFILE MODAL ================= */
+
+  --profile-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  --profile-modal-bg: #ffffff;
+  --profile-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  --profile-title: #111827;
+
+  --profile-avatar-border: #e5e7eb;
+
+  --profile-input-bg: #ffffff;
+  --profile-input-border: #d1d5db;
+  --profile-input-text: #111827;
+  --profile-input-focus: #6366f1;
+
+  --profile-update-bg: linear-gradient(135deg, #6366f1, #7c3aed);
+  --profile-update-hover: linear-gradient(135deg, #4f46e5, #6d28d9);
+  --profile-update-text: #ffffff;
+
+  --profile-divider: #e5e7eb;
+
+  --profile-danger-bg: rgba(239, 68, 68, 0.08);
+  --profile-danger-border: rgba(239, 68, 68, 0.3);
+  --profile-danger-text: #dc2626;
+  --profile-danger-hover: #b91c1c;
+
+  --profile-delete-bg: #ef4444;
+  --profile-delete-hover: #dc2626;
+  --profile-delete-text: #ffffff;
+
+  /* ================= HERO SECTION ================= */
+  --hero-bg: #ffffff;
+  --hero-heading: #4b5563;    
+  --hero-title: #0f172a;      
+  --hero-description: #6b7280
+
+  /* ================= Url Converter ================= */
+
+  --converter-wrapper-bg: #ffffff;
+  --converter-image-filter: none;
+
+  --converter-input-bg: #ffffff;
+  --converter-input-text: #111827;
+  --converter-input-border: #d1d5db;
+  --converter-input-focus: #6366f1; 
+  --converter-input-disabled-bg: #f3f4f6;
+  --converter-input-disabled-text: #9ca3af;
+  --converter-input-placeholder: #9ca3af;
+
+  --converter-url-error-text: #dc2626;
+  --converter-url-error-bg: #fef2f2;
+
+  --converter-btn-bg: #ef4444;
+  --converter-btn-hover: #dc2626;
+  --converter-btn-disabled-bg: #fca5a5;
+  --converter-btn-text: #ffffff;
+  --converter-btn-disabled-text: #7f1d1d;
+
+  /* ================= BENEFITS SECTION ================= */
+  --benefits-section-bg: #ffffff;
+  --benefits-title: #0f172a;
+
+  --benefits-card-bg: #ffffff;
+  --benefits-card-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.08);
+  --benefits-card-title: #111827;
+  --benefits-card-text: #4b5563;
+
+  --benefits-point-text: #374151;
+
+  /* ================= HOW TO USE SECTION ================= */
+
+  --steps-section-bg: #ffffff;
+  --steps-title: #0f172a;
+  --steps-card-bg: #ffffff;
+  --steps-icon: #6366f1;         
+  --steps-step-title: #6b7280;
+  --steps-text: #374151;
+
+  --steps-locked-bg: #0f172a;
+  --steps-locked-icon: #818cf8; 
+  --steps-locked-text: #ffffff;
+
+  /* ================= WHY CONVERT SECTION ================= */
+
+  --why-section-bg: #ffffff;
+  --why-heading: #0f172a;
+  --why-card-bg: #f9fafb;
+  --why-card-shadow-hover: 0 0 10px 2px rgba(0, 0, 0, 0.08);
+
+  --why-icon-color: #6366f1;   
+  --why-title-color: #374151;
+  --why-text-color: #4b5563;
+
+  /* ================= REVIEW CARD SECTION ================= */
+
+  --review-card-bg: #f9fafb;
+  --review-card-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.14);
+
+  --review-username: #111827;
+  --review-text: #374151;
+  --review-date: #6b7280;
+
+  /* ================= REVIEW MODAL SECTION ================= */
+
+  --review-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  --review-modal-bg: #ffffff;
+  --review-modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  --review-title: #111827;
+  --review-label: #374151;
+
+  --review-input-bg: #ffffff;
+  --review-input-border: #d1d5db;
+  --review-input-text: #111827;
+  --review-input-focus: #6366f1;
+
+  --review-submit-bg: linear-gradient(135deg, #6366f1, #7c3aed);
+  --review-submit-text: #ffffff;
+  --review-submit-bg-hover: linear-gradient(135deg, #4f46e5, #6d28d9);
+  --review-submit-disabled-bg: #9ca3af;
+
+  --review-cancel-bg: #e5e7eb;
+  --review-cancel-text: #111827;
+  --review-cancel-bg-hover: #d1d5db;
+
+  /* ================= REVIEW SECTION ================= */
+
+  --reviews-section-bg: #ffffff;
+  --reviews-title: #0f172a;
+
+  --reviews-btn-bg: #ffffff;
+  --reviews-btn-text: #6366f1;
+  --reviews-btn-border: #6366f1;
+
+  --reviews-btn-hover-bg: #6366f1;
+  --reviews-btn-hover-border: #6366f1;
+  --reviews-btn-text-hover: #ffffff;
+
+  /* ================= FOOTER ================= */
+  --footer-bg: #f9fafb;
+  --footer-title: #111827;
+  --footer-text: #374151;
+
+  --footer-link: #4b5563;
+  --footer-link-hover: #111827;
+
+  --footer-divider: #e5e7eb;
+  --footer-copy: #6b7280;
+
+  /* ================= DASHBOARD SIDEBAR ================= */
+
+  --dash-sidebar-bg: #f9fafb;
+  --dash-sidebar-border: #e5e7eb;
+
+  --dash-card-bg: #ffffff;
+  --dash-card-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+  --dash-text-primary: #111827;
+  --dash-text-secondary: #6b7280;
+
+  --dash-progress-bg: #e5e7eb;
+  --dash-progress-fill: #6366f1;
+
+  --dash-nav-hover: #f3f4f6;
+  --dash-nav-active-bg: #6366f1;
+  --dash-nav-active-text: #ffffff;
+
+  --dash-user-card-bg: #ffffff;
+  --dash-user-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  --dash-dropdown-bg: #ffffff;
+  --dash-dropdown-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  --dash-divider: #e5e7eb;
+
+  --dash-theme-hover: #f3f4f6;
+  --dash-theme-active: #6366f1;
+
+  /* ================= DASHBOARD FILE TABLE ================= */
+  --dash-files-section-bg: #ffffff;
+
+  --dash-table-bg: #ffffff;
+  --dash-table-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  --dash-table-head-bg: #f9fafb;
+  --dash-table-head-text: #374151;
+
+  --dash-table-row-border: #f3f4f6;
+  --dash-table-row-hover: #f9fafb;
+
+  --dash-table-text: #111827;
+
+  --dash-copy-bg: #f3f4f6;
+  --dash-copy-hover: #e5e7eb;
+  --dash-copy-text: #374151;
+
+  --dash-tooltip-bg: #111827;
+  --dash-tooltip-text: #ffffff;
+
+  /* ================= DASHBOARD UPGRADE CARD ================= */
+
+  --dash-upgrade-gradient: linear-gradient(135deg, #6366f1, #4f46e5);
+  --dash-upgrade-text: #ffffff;
+
+  --dash-upgrade-btn-bg: #ffffff;
+  --dash-upgrade-btn-text: #4f46e5;
+  --dash-upgrade-btn-hover: #f3f4f6;
+
+  --dash-upgrade-save-text: rgba(255, 255, 255, 0.85);
+
+  /* ================= DASHBOARD URL CONVERTER ================= */
+
+  --dash-url-section-bg: #f9fafb;
+
+  --dash-url-input-bg: #ffffff;
+  --dash-url-input-text: #111827;
+  --dash-url-input-border: #e5e7eb;
+  --dash-url-input-focus: #6366f1;
+
+  --dash-url-error-text: #dc2626;
+  --dash-url-error-bg: #fef2f2;
+
+  --dash-url-btn-bg: #dc2626;
+  --dash-url-btn-hover: #b91c1c;
+  --dash-url-btn-disabled: #f87171;
+  --dash-url-btn-text: #ffffff;
+
+  /* ================= DASHBOARD LAYOUT ================= */
+
+  --dash-layout-bg: #f9fafb;
+  --dash-content-bg: #f9fafb;
+
+
+  /* ================= ADMIN DASHBOARD ================= */
+
+  --admin-sidebar-bg: #f9fafb;
+  --admin-sidebar-border: #e5e7eb;
+
+  --admin-card-bg: #ffffff;
+  --admin-card-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+  --admin-text-primary: #111827;
+  --admin-text-secondary: #6b7280;
+
+  --admin-progress-bg: #e5e7eb;
+  --admin-progress-fill: #6366f1;
+
+  --admin-nav-hover: #f3f4f6;
+  --admin-nav-active-bg: #6366f1;
+  --admin-nav-active-text: #ffffff;
+
+  --admin-user-card-bg: #ffffff;
+  --admin-user-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  --admin-dropdown-bg: #ffffff;
+  --admin-dropdown-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  --admin-divider: #e5e7eb;
+
+  --admin-theme-hover: #f3f4f6;
+  --admin-theme-active: #6366f1;
+
+  /* ================= ADMIN DASHBOARD LAYOUT ================= */
+
+  --admin-dash-layout-bg: #f9fafb;
+  --admin-dash-content-bg: #f9fafb;
+
+  /* ================= ADMIN USER CARD ================= */
+
+  --admin-user-card-bg: #ffffff;
+  --admin-user-card-border: #e5e7eb;
+  --admin-user-card-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  --admin-user-card-hover-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+
+  --admin-user-card-text-primary: #111827;
+  --admin-user-card-text-secondary: #6b7280;
+
+  --admin-user-card-avatar-border: #e5e7eb;
+
+  --admin-user-card-review-border: #6366f1;
+  --admin-user-card-review-text: #6366f1;
+  --admin-user-card-review-hover-bg: #6366f1;
+  --admin-user-card-review-hover-text: #ffffff;
+
+  /* ================= ADMIN REVIEW MODAL ================= */
+    --arm-bg: #fff;
+    --arm-text: #1f2937;
+    --arm-border: #e5e7eb;
+    --arm-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+    --arm-success: #28a745;
+    --arm-danger: #dc3545;
+    --arm-secondary: #6c757d;
+
+    --arm-overlay: rgba(0,0,0,0.35);
+
+}

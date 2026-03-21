@@ -1,0 +1,292 @@
+/* ================= SIDEBAR CONTAINER ================= */
+
+.sidebar {
+  width: 300px;
+  background: var(--dash-sidebar-bg);
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--dash-sidebar-border);
+}
+
+/* ================= LOGO ================= */
+
+.sidebar-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.sidebar-logo{
+    height: 44px;
+    width: 110px;
+    object-fit: contain;
+}
+
+/* ================= PLAN CARD ================= */
+
+.plan-card {
+  background: var(--dash-card-bg);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: var(--dash-card-shadow);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--dash-text-secondary);
+}
+
+.plan-badge {
+  background: var(--dash-progress-fill);
+  color: var(--dash-nav-active-text);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+/* ================= USAGE ================= */
+
+.usage-item {
+  margin-bottom: 12px;
+}
+
+.usage-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--dash-text-primary);
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--dash-progress-bg);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--dash-progress-fill);
+}
+
+/* ================= UPGRADE BUTTON ================= */
+
+.upgrade-button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background: var(--dash-progress-fill);
+  color: var(--dash-nav-active-text);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.upgrade-button:hover {
+  opacity: 0.9;
+}
+
+/* ================= NAVIGATION ================= */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--dash-text-primary);
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background: var(--dash-nav-hover);
+}
+
+.sidebar-nav a.active {
+  background: var(--dash-nav-active-bg);
+  color: var(--dash-nav-active-text);
+}
+
+/* ================= USER SECTION ================= */
+
+.sidebar-user {
+  margin-top: auto;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  background: var(--dash-user-card-bg);
+  padding: 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: var(--dash-user-shadow);
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.user-card:hover {
+  opacity: 0.95;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+
+/* ================= USER INFO ================= */
+
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--dash-text-primary);
+}
+
+.user-email {
+  font-size: 12px;
+  color: var(--dash-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================= CHEVRON ================= */
+
+.sb-user-chevron {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+  color: var(--dash-text-secondary);
+}
+
+.user-card.open .sb-user-chevron {
+  transform: rotate(180deg);
+}
+
+/* ================= DROPDOWN ================= */
+
+.user-dropdown {
+  background: var(--dash-dropdown-bg);
+  border-radius: 14px;
+  margin-top: 8px;
+  padding: 12px;
+  box-shadow: var(--dash-dropdown-shadow);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+/* ================= DROPDOWN BUTTONS ================= */
+
+.dropdown-item-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  color: var(--dash-text-primary);
+}
+
+.dropdown-item-btn:hover {
+  background: var(--dash-nav-hover);
+}
+
+/* ================= THEME SECTION ================= */
+
+.sb-theme-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.sb-theme-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sb-theme-main-icon {
+  font-size: 16px;
+  opacity: 0.7;
+  color: var(--dash-text-secondary);
+}
+
+.sb-theme-label {
+  font-size: 14px;
+  color: var(--dash-text-primary);
+}
+
+.sb-theme-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.sb-theme-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  opacity: 0.7;
+  color: var(--dash-text-secondary);
+}
+
+.sb-theme-icon-box:hover {
+  background-color: var(--dash-theme-hover);
+  opacity: 1;
+}
+
+.sb-theme-active-box {
+  background-color: var(--dash-theme-hover);
+  color: var(--dash-theme-active);
+  opacity: 1;
+}
+
+/* ================= DIVIDER ================= */
+
+.dropdown-divider {
+  border: none;
+  height: 1px;
+  margin: 12px 0;
+  background-color: var(--dash-divider);
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.logout-btn {
+  border-radius: 8px;
+  font-weight: 500;
+}

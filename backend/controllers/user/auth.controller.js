@@ -21,8 +21,8 @@ exports.verifyEmailOTP = async (req, res, next) => {
 
         res.cookie("token", result.token, {
             httpOnly: true,
-            secure: false,      // true in production (HTTPS)
-            sameSite: "lax",    // "none" in production.
+            secure: process.env.NODE_ENV === "production",                    // true in production (HTTPS)
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" in production.
             maxAge: 24 * 60 * 60 * 1000,
         });
 
@@ -104,8 +104,8 @@ exports.googleLogin = async (req, res, next) => {
 
         res.cookie("token", result.token, {
             httpOnly: true,
-            secure: false,
-            sameSite: "lax",
+            secure: process.env.NODE_ENV === "production",                    // true in production (HTTPS)
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" in production.
             maxAge: 24 * 60 * 60 * 1000,
         });
 
@@ -127,8 +127,8 @@ exports.login = async (req, res, next) => {
 
         res.cookie("token", result.token, {
             httpOnly: true,
-            secure: false,      // true in production (HTTPS)
-            sameSite: "lax",    // "none" in production.
+            secure: process.env.NODE_ENV === "production",                    // true in production (HTTPS)
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" in production.
             maxAge: 24 * 60 * 60 * 1000,
         });
 
@@ -145,8 +145,8 @@ exports.login = async (req, res, next) => {
 exports.logout = (req, res) => {
     res.clearCookie("token", {
         httpOnly: true,
-        sameSite: "strict",
-        secure: false,      // true in production (HTTPS)
+        secure: process.env.NODE_ENV === "production",                    // true in production (HTTPS)
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" in production.
     });
 
     res.status(200).json({

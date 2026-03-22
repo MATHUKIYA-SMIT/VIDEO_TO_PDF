@@ -6,8 +6,8 @@ const initDB = async () => {
         pool = mysql.createPool({
             host: "127.0.0.2",
             port: 3306,
-            user: "root",
-            password: "123456789",
+            user: process.env.MYSQL_USER,
+            password: process.env.MYSQL_PASS,
             database: "video_pdf_system",
             waitForConnections: true,
             connectionLimit: 10,

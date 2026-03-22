@@ -9,7 +9,7 @@ const { runPythonFrameExtractor } = require("../../utils/pythonRunner");
 const { runFramesToPdf } = require("../../utils/pythonPdfRunner");
 const { safeDelete } = require("../../utils/fileCleanup");
 
-const { getVideoDuration } = require("../../utils/VideoDuration");
+const { getVideoDuration } = require("../../utils/videoDuration");
 
 const videoRepository = require("../../models/user/video.model");
 const pdfService = require("../../services/user/pdf.service");

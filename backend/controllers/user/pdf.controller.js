@@ -1,4 +1,5 @@
 const pdfService = require("../../services/user/pdf.service");
+const { safeDelete } = require("../../utils/fileCleanup");
 
 exports.download = async (req, res, next) => {
     try {
@@ -18,7 +19,7 @@ exports.download = async (req, res, next) => {
             }
 
             // 🧹 DELETE PDF AFTER SUCCESSFUL DOWNLOAD
-            pdfService.removeFile(file.path);
+            safeDelete(file.path);
         });
 
     } catch (err) {

@@ -26,15 +26,6 @@ exports.download = async (pdfId, userId) => {
     };
 };
 
-
-exports.removeFile = (filePath) => {
-    try {
-        fs.unlinkSync(filePath);
-    } catch (err) {
-        console.error("Failed to delete PDF:", err);
-    }
-};
-
 //used by video.service.js
 exports.createFromVideo = async (
     videoId,

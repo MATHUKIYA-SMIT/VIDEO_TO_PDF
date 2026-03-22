@@ -2,15 +2,18 @@ const { spawn } = require("child_process");
 const path = require("path");
 const { FRAME_DIR } = require("../config/path.config");
 
-const PYTHON_BIN = path.join(
-    __dirname,
-    "..",
-    "..",
-    "python-service",
-    "env",
-    "Scripts",
-    "python.exe"
-);
+const PYTHON_BIN =
+    process.env.NODE_ENV === "production"
+        ? "python3"
+        : path.join(
+            __dirname,
+            "..",
+            "..",
+            "python-service",
+            "env",
+            "Scripts",
+            "python.exe"
+        );
 
 const runPythonFrameExtractor = (videoPath, videoId, baseName) => {
     return new Promise((resolve, reject) => {

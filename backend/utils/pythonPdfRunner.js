@@ -2,15 +2,18 @@ const { spawn } = require("child_process");
 const path = require("path");
 const { PDF_DIR } = require("../config/path.config");
 
-const PYTHON_BIN = path.join(
-    __dirname,
-    "..",
-    "..",
-    "python-service",
-    "env",
-    "Scripts",
-    "python.exe" // Windows
-);
+const PYTHON_BIN =
+    process.env.NODE_ENV === "production"
+        ? "python3"
+        : path.join(
+            __dirname,
+            "..",
+            "..",
+            "python-service",
+            "env",
+            "Scripts",
+            "python.exe"
+        );
 
 const runFramesToPdf = (framesDir, videoId, baseName) => {
     return new Promise((resolve, reject) => {

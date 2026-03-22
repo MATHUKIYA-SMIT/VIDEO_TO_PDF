@@ -2,10 +2,15 @@ const { Server } = require("socket.io");
 
 let io;
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://video-to-pdf-frontend.onrender.com"
+];
+
 const initSocket = (server) => {
     io = new Server(server, {
         cors: {
-            origin: "http://localhost:5173",
+            origin: allowedOrigins,
             credentials: true
         }
     });

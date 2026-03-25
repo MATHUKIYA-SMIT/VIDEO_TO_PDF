@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getThemeCookie, setThemeCookie } from "@/utils/themeCookie";
 import { useAuth } from "@/features/auth/contexts/AuthContext";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const ThemeContext = createContext();
 
@@ -36,7 +37,7 @@ export const ThemeProvider = ({ children }) => {
         setThemeCookie(newTheme);
 
         if (isLoggedIn) {
-        await fetch("http://localhost:5000/api/user/theme", {
+        await fetch(`${API_BASE_URL}/api/user/theme`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

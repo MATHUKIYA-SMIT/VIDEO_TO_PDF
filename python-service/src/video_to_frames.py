@@ -161,7 +161,7 @@ def cluster_frames(features):
 
     features = np.array(features)
 
-    db = DBSCAN(eps=8,min_samples=2)
+    db = DBSCAN(eps=6,min_samples=2)
 
     labels = db.fit_predict(features)
 

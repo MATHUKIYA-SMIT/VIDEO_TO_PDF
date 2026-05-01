@@ -140,38 +140,6 @@ def region_layout_shift(prev_centers, curr_centers):
 
 def phash(image):
 
-    resized = cv2.resize(image, (32,32))
-    gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
-
-    dct = cv2.dct(np.float32(gray))
-
-    dct_low = dct[:8,:8]
-    avg = dct_low.mean()
-
-    return (dct_low > avg).flatten()
-
-
-def hash_distance(h1,h2):
-    return np.count_nonzero(h1!=h2)
-
-
-# ---------- CLUSTER ----------
-
-def cluster_frames(features):
-
-    features = np.array(features)
-
-    db = DBSCAN(eps=8, min_samples=2)
-
-    labels = db.fit_predict(features)
-
-    return labels
-
-
-# ---------- PHASH ----------
-
-def phash(image):
-
     resized = cv2.resize(image,(32,32))
     gray = cv2.cvtColor(resized,cv2.COLOR_BGR2GRAY)
 

@@ -1,18 +1,9 @@
-import sys
 import cv2
 import numpy as np
 import os
 import time
 from collections import defaultdict
 from sklearn.cluster import DBSCAN
-
-# ---------- ARGUMENTS ----------
-if len(sys.argv) < 3:
-    print("ERROR: video_path and output_dir required")
-    sys.exit(1)
-
-video_path = sys.argv[1]
-output_dir = sys.argv[2]
 
 start_time = time.time()
 
@@ -221,7 +212,7 @@ def select_frames_from_clusters(frames, timestamps, labels):
 
 # ---------- MAIN ----------
 
-def extract_clean_slides_from_video(video_path, output_dir, sample_every_sec=2):
+def video_to_frames(video_path, output_dir, sample_every_sec=2):
 
     global TEXT_REGION_MIN
     global EDGE_THRESHOLD
@@ -387,11 +378,8 @@ def extract_clean_slides_from_video(video_path, output_dir, sample_every_sec=2):
 
         cv2.imwrite(out_path, enhanced)
 
-        slide_index+=1
-
+        slide_index += 1
+    
     print("EXTRACTED:",slide_index)
     print("TIME:",round(time.time()-start_time,2),"sec")
-
-
-# ---------- RUN ----------
-extract_clean_slides_from_video(video_path,output_dir)
+    return output_dir

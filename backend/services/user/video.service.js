@@ -3,10 +3,11 @@ const fs = require("fs");
 
 const { getDB } = require("../../config/db.config");
 const { VIDEO_DIR } = require("../../config/path.config");
+const { PDF_DIR } = require("../../config/path.config");
+const { FRAME_DIR } = require("../../config/path.config");
 
 const { downloadYoutubeVideo } = require("../../utils/execUtil");
-const { runPythonFrameExtractor } = require("../../utils/pythonRunner");
-const { runFramesToPdf } = require("../../utils/pythonPdfRunner");
+const pythonClient = require("../../utils/pythonClient");
 const { safeDelete } = require("../../utils/fileCleanup");
 
 const { getVideoDuration } = require("../../utils/videoDuration");
@@ -37,7 +38,7 @@ exports.downloadVideoFromUrl = async (url, userId) => {
 
     try {
 
-        // 🔹 1️⃣ Get Video Duration FIRST
+        // Get Video Duration FIRST
         const durationMinutes = await getVideoDuration(url);
 
         console.log("duration in mintes ",durationMinutes);
@@ -48,10 +49,10 @@ exports.downloadVideoFromUrl = async (url, userId) => {
 
         const durationSeconds = Math.round(durationMinutes * 60);
 
-        // 🔹 2️⃣ Start Transaction
+        // Start Transaction
         await connection.beginTransaction();
 
-        // 🔹 3️⃣ Check & Update Usage (inside transaction)
+        // Check & Update Usage (inside transaction)
         await usageService.checkAndUpdateUsage(
             userId,
             durationMinutes,
@@ -65,7 +66,7 @@ exports.downloadVideoFromUrl = async (url, userId) => {
         const fileTemplate = `${baseName}.%(ext)s`;
         const outputPath = path.join(VIDEO_DIR, fileTemplate);
 
-        // 🔹 4️⃣ Create Video Record
+        // Create Video Record
         videoId = await videoRepository.create(
             {
                 userId,
@@ -78,7 +79,7 @@ exports.downloadVideoFromUrl = async (url, userId) => {
             connection
         );
 
-        // 🔹 5️⃣ Download Video
+        // Download Video
         await downloadYoutubeVideo(url, outputPath);
 
         const files = fs.readdirSync(VIDEO_DIR);
@@ -92,7 +93,7 @@ exports.downloadVideoFromUrl = async (url, userId) => {
 
         finalPath = path.join(VIDEO_DIR, actualFile);
 
-        // 🔹 6️⃣ Update Status → completed
+        // Update Status → completed
         await videoRepository.updateStatus(
             videoId,
             "completed",
@@ -101,27 +102,22 @@ exports.downloadVideoFromUrl = async (url, userId) => {
             connection
         );
 
-        // 🔹 7️⃣ Extract Frames
-        framesDir = await runPythonFrameExtractor(
-            finalPath,
-            videoId,
-            baseName
-        );
+        framesDir = path.join(FRAME_DIR, `${baseName}_${videoId}`);
+        const pdfPath = path.join(PDF_DIR, `${baseName}_${videoId}.pdf`);
+        const pdfName = path.basename(pdfPath);
 
-        // 🔹 8️⃣ Convert frames to PDF
-        const pdfPath = await runFramesToPdf(
+        const result = await pythonClient.processVideo({
+            videoPath: finalPath,
             framesDir,
+            pdfPath,
             videoId,
             baseName
-        );
-
-        if (!pdfPath) {
+        });
+        if (!result.success) {
             throw new AppError("PDF generation failed !!", 500);
         }
 
-        const pdfName = path.basename(pdfPath);
-
-        // 🔹 9️⃣ Save PDF Record
+        // Save PDF Record
         const pdfId = await pdfService.createFromVideo(
             videoId,
             pdfName,
@@ -129,11 +125,11 @@ exports.downloadVideoFromUrl = async (url, userId) => {
             connection
         );
 
-        // 🔹 🔟 Commit Transaction
+        // Commit Transaction
         await connection.commit();
         connection.release();
 
-        // 🔹 Cleanup files (outside DB transaction)
+        // Cleanup files
         safeDelete(finalPath);  // delete video
         safeDelete(framesDir);  // delete frames folder
 
@@ -144,16 +140,18 @@ exports.downloadVideoFromUrl = async (url, userId) => {
 
     } catch (err) {
 
-        // 🔹 Rollback DB Changes
+        console.error("video.service.js ERROR:", err);
+
+        // Rollback DB Changes
         await connection.rollback();
         connection.release();
 
-        // 🔹 Update video status if created
+        // Update video status if created
         if (videoId) {
             await videoRepository.updateStatus(videoId, "failed");
         }
 
-        // 🔹 Cleanup Files
+        // Cleanup Files
         if (finalPath) safeDelete(finalPath);
         if (framesDir) safeDelete(framesDir);
 
@@ -164,7 +162,6 @@ exports.downloadVideoFromUrl = async (url, userId) => {
         throw new AppError("Video processing failed !!", 500);
     }
 };
-
 
 exports.getUserVideos = async (userId) => {
     return await videoRepository.findByUserId(userId);

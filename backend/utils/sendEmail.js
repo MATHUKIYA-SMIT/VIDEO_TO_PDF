@@ -13,12 +13,19 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendEmail = async (to, subject, text) => {
+
+    console.log("SMTP VERIFICATION IS IN PROGRESS :");
+    await transporter.verify();
+    console.log("SMTP VERIFIED");
+
     await transporter.sendMail({
         from: process.env.EMAIL_USER,
         to,
         subject,
         text,
     });
+
+    console.log("EMAIL SENT");
 };
 
 module.exports = sendEmail;

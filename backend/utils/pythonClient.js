@@ -1,8 +1,3 @@
-const VIDEO_PROCESSOR_SERVICE_URL =
-    process.env.NODE_ENV === "production"
-        ? process.env.VIDEO_PROCESSOR_SERVICE_URL_PRODUCTION
-        : process.env.VIDEO_PROCESSOR_SERVICE_URL_LOCAL;
-
 exports.processVideo = async ({
     videoPath,
     framesDir,
@@ -12,7 +7,7 @@ exports.processVideo = async ({
 }) => {
 
     const response = await fetch(
-        `${VIDEO_PROCESSOR_SERVICE_URL}/process-video`,
+        `${process.env.VIDEO_PROCESSING_SERVICE_URL}/process-video`,
         {
             method: "POST",
             headers: {

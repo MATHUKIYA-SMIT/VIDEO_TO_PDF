@@ -1,7 +1,5 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
 export const apiClient = async (endpoint, options = {}) => {
-    const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${endpoint}`, {
         credentials: "include",
         ...options,
     });

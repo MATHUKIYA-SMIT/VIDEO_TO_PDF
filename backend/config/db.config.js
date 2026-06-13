@@ -5,28 +5,12 @@ let pool;
 const initDB = async () => {
     try {
 
-        const isProduction = process.env.NODE_ENV === "production";
-
         pool = mysql.createPool({
-            host: isProduction
-                ? process.env.MYSQLHOST
-                : process.env.MYSQL_HOST,
-
-            port: isProduction
-                ? process.env.MYSQLPORT
-                : process.env.MYSQL_PORT,
-
-            user: isProduction
-                ? process.env.MYSQLUSER
-                : process.env.MYSQL_USER,
-
-            password: isProduction
-                ? process.env.MYSQLPASSWORD
-                : process.env.MYSQL_PASS,
-
-            database: isProduction
-                ? process.env.MYSQLDATABASE
-                : "video_pdf_system",
+            host: process.env.MYSQLHOST,
+            port: process.env.MYSQLPORT,
+            user: process.env.MYSQLUSER,
+            password: process.env.MYSQLPASSWORD,
+            database: process.env.MYSQLDATABASE,
 
             waitForConnections: true,
             connectionLimit: 10,

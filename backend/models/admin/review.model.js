@@ -10,6 +10,7 @@ exports.findByUserId = async (userId) => {
             rating,
             comment,
             status,
+            sentiment,
             created_at
         FROM reviews
         WHERE user_id = ?

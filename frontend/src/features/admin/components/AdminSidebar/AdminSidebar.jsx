@@ -42,7 +42,7 @@ const AdminSidebar = () => {
                 </NavLink>
 
                 <NavLink to="/admin/dashboard/pending-reviews">
-                    User Management
+                    Pending Review
                 </NavLink>
             </nav>
 

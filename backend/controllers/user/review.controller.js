@@ -13,9 +13,7 @@ exports.submit = async (req, res, next) => {
 
         res.status(201).json({
             success: true,
-            message: result.updated
-                ? "Review updated & sent for approval"
-                : "Review submitted for approval",
+            message: "Review submitted for approval",
             reviewId: result.id,
         });
     } catch (err) {

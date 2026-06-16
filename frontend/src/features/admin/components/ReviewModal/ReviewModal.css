@@ -45,11 +45,21 @@
 
 .arm-title { margin-bottom: 15px; }
 
-.arm-status { font-weight: 600; }
+.arm-status, .arm-sentiment {
+    font-weight: 600;
+}
 
-.arm-approved { color: var(--arm-success); }
-.arm-pending { color: #f59e0b; }
-.arm-rejected { color: var(--arm-danger); }
+.arm-approved, .arm-positive {
+    color: var(--arm-success);
+}
+
+.arm-pending, .arm-neutral {
+    color: #f59e0b;
+}
+
+.arm-rejected, .arm-negative {
+    color: var(--arm-danger);
+}
 
 /* Rating */
 .arm-stars {

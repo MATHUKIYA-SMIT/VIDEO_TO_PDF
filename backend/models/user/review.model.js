@@ -1,15 +1,15 @@
 const { getDB } = require("../../config/db.config");
 
 // 🔹 Create review
-exports.create = async ({ userId, rating, comment }) => {
+exports.create = async ({ userId, rating, comment, sentiment }) => {
     const db = getDB();
 
     const [result] = await db.query(
         `
-        INSERT INTO reviews (user_id, rating, comment, status)
-        VALUES (?, ?, ?, 'pending')
+        INSERT INTO reviews (user_id, rating, comment, sentiment, status)
+        VALUES (?, ?, ?, ?, 'pending')
         `,
-        [userId, rating, comment]
+        [userId, rating, comment, sentiment]
     );
 
     return result.insertId;
@@ -30,16 +30,16 @@ exports.findByUserId = async (userId) => {
 
 
 // 🔹 Update review by ID
-exports.updateById = async (id, { rating, comment }) => {
+exports.updateById = async (id, { rating, comment, sentiment }) => {
     const db = getDB();
 
     await db.query(
         `
         UPDATE reviews
-        SET rating = ?, comment = ?, status = 'pending'
+        SET rating = ?, comment = ?, sentiment = ?, status = 'pending'
         WHERE id = ?
         `,
-        [rating, comment, id]
+        [rating, comment, sentiment, id]
     );
 };
 
@@ -83,16 +83,16 @@ exports.findApproved = async (userId) => {
 
 
 // 🔹 Update review only if owner
-exports.updateByIdAndUser = async (reviewId, userId, rating, comment) => {
+exports.updateByIdAndUser = async (reviewId, userId, rating, comment, sentiment) => {
     const db = getDB();
 
     const [result] = await db.query(
         `
         UPDATE reviews
-        SET rating = ?, comment = ?, status = 'pending'
+        SET rating = ?, comment = ?, sentiment = ?, status = 'pending'
         WHERE id = ? AND user_id = ?
         `,
-        [rating, comment, reviewId, userId]
+        [rating, comment, sentiment, reviewId, userId]
     );
 
     return result.affectedRows;

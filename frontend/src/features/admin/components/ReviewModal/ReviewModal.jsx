@@ -52,6 +52,13 @@ const ReviewModal = ({ userId, onClose, onActionComplete }) => {
                                     {review.status}
                                 </span>
                             </p>
+                            <p>
+                                <strong>Sentiment:</strong>{" "}
+                                <span
+                                    className={`arm-sentiment arm-${review.sentiment?.toLowerCase()}`}>
+                                    {review.sentiment}
+                                </span>
+                            </p>
 
                             <div className="arm-rating">
                                 <strong>Rating:</strong>

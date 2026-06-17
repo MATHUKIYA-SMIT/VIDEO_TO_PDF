@@ -41,7 +41,7 @@ exports.downloadVideoFromUrl = async (url, userId) => {
         // Get Video Duration FIRST
         const durationMinutes = await getVideoDuration(url);
 
-        console.log("duration in mintes ",durationMinutes);
+        console.log("duration in minutes ",durationMinutes);
 
         if (durationMinutes > 20) {
             throw new AppError("Video duration cannot exceed 15 minutes", 400);
